@@ -16,7 +16,7 @@ namespace AtConsoleApp.Services
         {
             _context = context;
         }
-        public bool AddEmp(Employee employee)
+        public bool AddEmployee(Employee employee)
         {
             try
             {

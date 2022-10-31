@@ -14,6 +14,14 @@ namespace AtConsoleApp.Test
         }
 
         [Fact]
+        public void Add_2float_Values_Pass_Test()
+        {
+            decimal expected = 35.9M;
+            decimal actual = Calculator.Add(12.4M, 23.5M);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void Add_2_string_values_Pass_Test()
         {
             string expected = "naeemashfaq";
@@ -21,12 +29,6 @@ namespace AtConsoleApp.Test
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void Add_2float_Values_Pass_Test()
-        {
-            float expected = 35.9f;
-            float actual = Calculator.Add(12.4f, 23.5f);
-            Assert.Equal(expected, actual);
-        }
+        
     }
 }

@@ -9,7 +9,7 @@ namespace AtConsoleApp.Services
 {
     public interface IEmployeeService
     {
-        bool AddEmp(Employee employee);
+       bool AddEmployee(Employee employee);
        public IEnumerable<Employee> GetEmployees();
     }
 }

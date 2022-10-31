@@ -61,24 +61,7 @@ namespace AtConsoleApp.Handler
                     PrintEmpData();
                     break;
             }
-            if (option == 1)
-            {
-                
-
-            }
-            else if (option == 2)
-            {
-                
-
-            }
-            else if (option == 3)
-            {
-                
-            }
-           
-            
-
-        }
+         }
 
         public void PrintEmpData()
         {
@@ -105,7 +88,7 @@ namespace AtConsoleApp.Handler
         {
             emp.FirstName = fName;
             emp.LastName = lName;
-            bool res = _empService.AddEmp(emp);
+            bool res = _empService.AddEmployee(emp);
             if (res == true)
             {
                 Console.WriteLine("\n Record added successfully");
@@ -118,12 +101,12 @@ namespace AtConsoleApp.Handler
 
         public void AddInputs (string input1, string input2)
         {
-            float mydec1, mydec2;
+            Decimal mydec1, mydec2;
             int num1, num2;
-            if ( float.TryParse(input1, out mydec1) && float.TryParse(input2, out mydec2))
+            if ( Decimal.TryParse(input1, out mydec1) && Decimal.TryParse(input2, out mydec2))
             {
                 var result = mydec1.Add(mydec2);
-                Console.WriteLine("The result dec is: " + result);
+                Console.WriteLine("The result in dec is: " + result);
             }
             else if (int.TryParse(input1, out num1) && int.TryParse(input2, out num2))
             {
